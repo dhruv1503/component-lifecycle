@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+   
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+   padding: 1em;
+    height: 300px;
+    width: 400px;
+    background-color: #191919;
+   
+    
+}
+
+.circle-container{
+    display: flex;
+    gap: 2em;
+/*    
+    left:5px; */
+    position: relative;
+    margin-bottom: 0.5em;
+
+}
+
+
+
+.circle{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #F6E59C;
+   position: absolute;
+
+   
+}
+
+.c1{
+    left:5px
+}
+
+.c2{
+    left: 50px
+}
+
+.c3{
+  left: 95px;
+}
+
+.c4{
+    left: 140px
+}
+
+@keyframes movement-c1 {
+    0%{
+    left: 5px
+    }
+    100%{
+        left: calc(300px - 5px)
+    }
+}
+@keyframes movement-c2 {
+    0%{
+    left: 50px
+    }
+    100%{
+        left: calc(300px - 50px)
+    }
+}
+@keyframes movement-c3 {
+    0%{
+    left: 95px
+    }
+    100%{
+        left: calc(300px - 95px)
+    }
+}
+@keyframes movement-c4 {
+    0%{
+    left: 140px
+    }
+    100%{
+        left: calc(300px - 140px)
+    }
+}
+
+@media (max-width: 1000px){
+    /* .circle-container{
+        flex-direction: row-reverse;
+    } */
+
+    .circle{
+        animation-name: movement-c1;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .c4{
+        animation-name: movement-c4;
+        animation-delay: 0s;
+        
+    }
+   .c3{
+    animation-name: movement-c3;
+    animation-delay: 2s;
+   }
+   .c2{
+    animation-name: movement-c2;
+    animation-delay: 4s;
+   }
+   .c1{
+    animation-delay: 6s;
+   }
+}
+
